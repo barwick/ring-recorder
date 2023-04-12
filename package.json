@@ -1,0 +1,19 @@
+{
+  "name": "ring-recorder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-datetime": "^2.1.2",
+    "ring-client-api": "^11.7.5"
+  },
+  "devDependencies": {
+    "forever": "^4.0.3"
+  },
+  "scripts": {
+    "start": "forever start --append -l forever.log -o recorder-out.log -e recorder-err.log index.mjs",
+    "stop": "forever stop index.mjs"
+  }
+}
